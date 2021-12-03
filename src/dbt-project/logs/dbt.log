@@ -1,0 +1,1917 @@
+2021-12-03 21:40:16.539027 (MainThread): Running with dbt=0.21.0
+2021-12-03 21:40:16.543531 (MainThread): target not specified in profile 'athena', using 'default'
+2021-12-03 21:40:16.768032 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-03 21:40:16.769339 (MainThread): Tracking: tracking
+2021-12-03 21:40:16.801528 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe238128290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2380d7ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2380db910>]}
+2021-12-03 21:40:16.802580 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe238128290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2380d72d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe2380d7ad0>]}
+2021-12-03 21:40:16.802958 (MainThread): Flushing usage events
+2021-12-03 21:40:17.139679 (MainThread): Encountered an error:
+2021-12-03 21:40:17.140325 (MainThread): Compilation Error
+  dbt found 1 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_modules. Run "dbt deps" to install package dependencies.
+2021-12-03 21:40:17.142232 (MainThread): Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 433, in run
+    self._runtime_initialize()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 149, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 87, in _runtime_initialize
+    self.load_manifest()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 74, in load_manifest
+    self.manifest = ManifestLoader.get_full_manifest(self.config)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/parser/manifest.py", line 179, in get_full_manifest
+    projects = config.load_dependencies()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/runtime.py", line 337, in load_dependencies
+    f'dbt found {count_packages_specified} package(s) '
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/exceptions.py", line 444, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error
+  dbt found 1 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_modules. Run "dbt deps" to install package dependencies.
+
+2021-12-03 21:40:35.488600 (MainThread): Running with dbt=0.21.0
+2021-12-03 21:40:35.493300 (MainThread): Profile not loaded due to error: Runtime Error
+  Could not find profile named 'athena'
+2021-12-03 21:40:35.493696 (MainThread): No profile "athena" found, continuing with no target
+2021-12-03 21:40:35.523650 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.deps.DepsTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/ec2-user/.dbt', project_dir=None, record_timing_info=None, rpc_method='deps', single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='deps', write_json=True)
+2021-12-03 21:40:35.524348 (MainThread): Tracking: do not track
+2021-12-03 21:40:35.553823 (MainThread): Set downloads directory='/tmp/dbt-downloads-molj7hsj'
+2021-12-03 21:40:35.554385 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/index.json
+2021-12-03 21:40:35.706384 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/index.json 200
+2021-12-03 21:40:35.707082 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils.json
+2021-12-03 21:40:35.829766 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils.json 200
+2021-12-03 21:40:35.830882 (MainThread): * Deprecation Warning: The `fishtown-analytics/dbt_utils` package is deprecated
+in favor of `dbt-labs/dbt_utils`. Please update your `packages.yml`
+configuration to use `dbt-labs/dbt_utils` instead.
+2021-12-03 21:40:35.865193 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils/0.7.0.json
+2021-12-03 21:40:36.023991 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils/0.7.0.json 200
+2021-12-03 21:40:36.024708 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils.json
+2021-12-03 21:40:36.143799 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils.json 200
+2021-12-03 21:40:36.181725 (MainThread): Making package registry request: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils/0.7.0.json
+2021-12-03 21:40:36.349062 (MainThread): Response from registry: GET https://hub.getdbt.com/api/v1/fishtown-analytics/dbt_utils/0.7.0.json 200
+2021-12-03 21:40:36.350205 (MainThread): Installing fishtown-analytics/dbt_utils@0.7.0
+2021-12-03 21:40:36.528658 (MainThread):   Installed from version 0.7.0
+2021-12-03 21:40:36.529063 (MainThread):   Up to date!
+2021-12-03 21:40:36.529702 (MainThread): Flushing usage events
+2021-12-03 21:40:46.301389 (MainThread): Running with dbt=0.21.0
+2021-12-03 21:40:46.306219 (MainThread): target not specified in profile 'athena', using 'default'
+2021-12-03 21:40:46.535255 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-03 21:40:46.536381 (MainThread): Tracking: tracking
+2021-12-03 21:40:46.566382 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4176b2a790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4176b2a710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4176add950>]}
+2021-12-03 21:40:46.589194 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4176afbbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4176afbf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4176afb550>]}
+2021-12-03 21:40:46.589964 (MainThread): Flushing usage events
+2021-12-03 21:40:46.896548 (MainThread): Encountered an error:
+2021-12-03 21:40:46.897267 (MainThread): Runtime Error
+  Failed to read package: Runtime Error
+    This version of dbt is not supported with the 'dbt_utils' package.
+      Installed version of dbt: =0.21.0
+      Required version of dbt for 'dbt_utils': ['>=0.20.0', '<0.21.0']
+    Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+    
+  
+  Error encountered in /home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project/dbt_modules/dbt_utils/dbt_project.yml
+
+Error encountered in /home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project/dbt_modules/dbt_utils
+2021-12-03 21:40:46.899262 (MainThread): Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/runtime.py", line 367, in load_projects
+    project = self.new_project(str(path))
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/runtime.py", line 147, in new_project
+    verify_version=getattr(self.args, 'version_check', False),
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/project.py", line 643, in from_project_root
+    return partial.render(renderer)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/project.py", line 289, in render
+    return self.create_project(rendered)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/project.py", line 303, in create_project
+    verify_version=self.verify_version,
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/project.py", line 226, in _get_required_version
+    validate_version(dbt_version, project_dict['name'])
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/project.py", line 203, in validate_version
+    raise DbtProjectError(msg)
+dbt.exceptions.DbtProjectError: Runtime Error
+  This version of dbt is not supported with the 'dbt_utils' package.
+    Installed version of dbt: =0.21.0
+    Required version of dbt for 'dbt_utils': ['>=0.20.0', '<0.21.0']
+  Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+  
+
+Error encountered in /home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project/dbt_modules/dbt_utils/dbt_project.yml
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 433, in run
+    self._runtime_initialize()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 149, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 87, in _runtime_initialize
+    self.load_manifest()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/runnable.py", line 74, in load_manifest
+    self.manifest = ManifestLoader.get_full_manifest(self.config)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/parser/manifest.py", line 179, in get_full_manifest
+    projects = config.load_dependencies()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/runtime.py", line 347, in load_dependencies
+    for project_name, project in self.load_projects(project_paths):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/config/runtime.py", line 373, in load_projects
+    ) from e
+dbt.exceptions.DbtProjectError: Runtime Error
+  Failed to read package: Runtime Error
+    This version of dbt is not supported with the 'dbt_utils' package.
+      Installed version of dbt: =0.21.0
+      Required version of dbt for 'dbt_utils': ['>=0.20.0', '<0.21.0']
+    Check the requirements for the 'dbt_utils' package, or run dbt again with --no-version-check
+    
+  
+  Error encountered in /home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project/dbt_modules/dbt_utils/dbt_project.yml
+
+Error encountered in /home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project/dbt_modules/dbt_utils
+
+2021-12-03 21:41:15.616870 (MainThread): Running with dbt=0.21.0
+2021-12-03 21:41:15.621445 (MainThread): target not specified in profile 'athena', using 'default'
+2021-12-03 21:41:15.846424 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=False, warn_error=False, which='run', write_json=True)
+2021-12-03 21:41:15.847313 (MainThread): Tracking: tracking
+2021-12-03 21:41:15.876360 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe611f32590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe611f32050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe611ee2690>]}
+2021-12-03 21:41:15.903428 (MainThread): Partial parsing not enabled
+2021-12-03 21:41:15.927926 (MainThread): Parsing macros/adapters.sql
+2021-12-03 21:41:15.953219 (MainThread): Parsing macros/catalog.sql
+2021-12-03 21:41:15.958377 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-03 21:41:15.995985 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-03 21:41:16.003815 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-03 21:41:16.005643 (MainThread): Parsing macros/materializations/table.sql
+2021-12-03 21:41:16.011330 (MainThread): Parsing macros/materializations/view.sql
+2021-12-03 21:41:16.022252 (MainThread): Parsing macros/core.sql
+2021-12-03 21:41:16.029873 (MainThread): Parsing macros/adapters/common.sql
+2021-12-03 21:41:16.119949 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-03 21:41:16.135646 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-03 21:41:16.138807 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-03 21:41:16.142025 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-03 21:41:16.146886 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-03 21:41:16.150071 (MainThread): Parsing macros/etc/query.sql
+2021-12-03 21:41:16.152086 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-03 21:41:16.155567 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-03 21:41:16.172778 (MainThread): Parsing macros/materializations/test.sql
+2021-12-03 21:41:16.185700 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-03 21:41:16.210130 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-03 21:41:16.213992 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-03 21:41:16.233131 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-03 21:41:16.267346 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-03 21:41:16.308576 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-03 21:41:16.359276 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-03 21:41:16.362999 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-03 21:41:16.394787 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-03 21:41:16.407780 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-03 21:41:16.415420 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-03 21:41:16.429239 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-03 21:41:16.433917 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-03 21:41:16.436281 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-03 21:41:16.439663 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-03 21:41:16.442380 (MainThread): Parsing macros/cross_db_utils/_is_ephemeral.sql
+2021-12-03 21:41:16.446080 (MainThread): Parsing macros/cross_db_utils/_is_relation.sql
+2021-12-03 21:41:16.448162 (MainThread): Parsing macros/cross_db_utils/cast_bool_to_text.sql
+2021-12-03 21:41:16.450834 (MainThread): Parsing macros/cross_db_utils/concat.sql
+2021-12-03 21:41:16.452677 (MainThread): Parsing macros/cross_db_utils/current_timestamp.sql
+2021-12-03 21:41:16.459176 (MainThread): Parsing macros/cross_db_utils/datatypes.sql
+2021-12-03 21:41:16.470173 (MainThread): Parsing macros/cross_db_utils/date_trunc.sql
+2021-12-03 21:41:16.473083 (MainThread): Parsing macros/cross_db_utils/dateadd.sql
+2021-12-03 21:41:16.478705 (MainThread): Parsing macros/cross_db_utils/datediff.sql
+2021-12-03 21:41:16.496897 (MainThread): Parsing macros/cross_db_utils/except.sql
+2021-12-03 21:41:16.499189 (MainThread): Parsing macros/cross_db_utils/hash.sql
+2021-12-03 21:41:16.502069 (MainThread): Parsing macros/cross_db_utils/identifier.sql
+2021-12-03 21:41:16.505085 (MainThread): Parsing macros/cross_db_utils/intersect.sql
+2021-12-03 21:41:16.507126 (MainThread): Parsing macros/cross_db_utils/last_day.sql
+2021-12-03 21:41:16.513818 (MainThread): Parsing macros/cross_db_utils/length.sql
+2021-12-03 21:41:16.516141 (MainThread): Parsing macros/cross_db_utils/literal.sql
+2021-12-03 21:41:16.518008 (MainThread): Parsing macros/cross_db_utils/position.sql
+2021-12-03 21:41:16.520975 (MainThread): Parsing macros/cross_db_utils/replace.sql
+2021-12-03 21:41:16.523673 (MainThread): Parsing macros/cross_db_utils/right.sql
+2021-12-03 21:41:16.528086 (MainThread): Parsing macros/cross_db_utils/safe_cast.sql
+2021-12-03 21:41:16.531582 (MainThread): Parsing macros/cross_db_utils/split_part.sql
+2021-12-03 21:41:16.534974 (MainThread): Parsing macros/cross_db_utils/width_bucket.sql
+2021-12-03 21:41:16.545102 (MainThread): Parsing macros/jinja_helpers/log_info.sql
+2021-12-03 21:41:16.547424 (MainThread): Parsing macros/jinja_helpers/pretty_log_format.sql
+2021-12-03 21:41:16.549688 (MainThread): Parsing macros/jinja_helpers/pretty_time.sql
+2021-12-03 21:41:16.552125 (MainThread): Parsing macros/jinja_helpers/slugify.sql
+2021-12-03 21:41:16.554410 (MainThread): Parsing macros/materializations/insert_by_period_materialization.sql
+2021-12-03 21:41:16.603794 (MainThread): Parsing macros/schema_tests/accepted_range.sql
+2021-12-03 21:41:16.608612 (MainThread): Parsing macros/schema_tests/at_least_one.sql
+2021-12-03 21:41:16.611073 (MainThread): Parsing macros/schema_tests/cardinality_equality.sql
+2021-12-03 21:41:16.614702 (MainThread): Parsing macros/schema_tests/equal_rowcount.sql
+2021-12-03 21:41:16.617768 (MainThread): Parsing macros/schema_tests/equality.sql
+2021-12-03 21:41:16.624394 (MainThread): Parsing macros/schema_tests/expression_is_true.sql
+2021-12-03 21:41:16.627959 (MainThread): Parsing macros/schema_tests/fewer_rows_than.sql
+2021-12-03 21:41:16.631163 (MainThread): Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+2021-12-03 21:41:16.646623 (MainThread): Parsing macros/schema_tests/not_accepted_values.sql
+2021-12-03 21:41:16.650781 (MainThread): Parsing macros/schema_tests/not_constant.sql
+2021-12-03 21:41:16.653068 (MainThread): Parsing macros/schema_tests/recency.sql
+2021-12-03 21:41:16.656468 (MainThread): Parsing macros/schema_tests/relationships_where.sql
+2021-12-03 21:41:16.660711 (MainThread): Parsing macros/schema_tests/sequential_values.sql
+2021-12-03 21:41:16.665814 (MainThread): Parsing macros/schema_tests/test_not_null_where.sql
+2021-12-03 21:41:16.668426 (MainThread): Parsing macros/schema_tests/test_unique_where.sql
+2021-12-03 21:41:16.671172 (MainThread): Parsing macros/schema_tests/unique_combination_of_columns.sql
+2021-12-03 21:41:16.676329 (MainThread): Parsing macros/sql/date_spine.sql
+2021-12-03 21:41:16.684647 (MainThread): Parsing macros/sql/generate_series.sql
+2021-12-03 21:41:16.692739 (MainThread): Parsing macros/sql/get_column_values.sql
+2021-12-03 21:41:16.701988 (MainThread): Parsing macros/sql/get_query_results_as_dict.sql
+2021-12-03 21:41:16.706577 (MainThread): Parsing macros/sql/get_relations_by_pattern.sql
+2021-12-03 21:41:16.713021 (MainThread): Parsing macros/sql/get_relations_by_prefix.sql
+2021-12-03 21:41:16.720028 (MainThread): Parsing macros/sql/get_tables_by_pattern_sql.sql
+2021-12-03 21:41:16.731644 (MainThread): Parsing macros/sql/get_tables_by_prefix_sql.sql
+2021-12-03 21:41:16.734940 (MainThread): Parsing macros/sql/groupby.sql
+2021-12-03 21:41:16.737474 (MainThread): Parsing macros/sql/haversine_distance.sql
+2021-12-03 21:41:16.748416 (MainThread): Parsing macros/sql/nullcheck.sql
+2021-12-03 21:41:16.751591 (MainThread): Parsing macros/sql/nullcheck_table.sql
+2021-12-03 21:41:16.754682 (MainThread): Parsing macros/sql/pivot.sql
+2021-12-03 21:41:16.762395 (MainThread): Parsing macros/sql/safe_add.sql
+2021-12-03 21:41:16.765332 (MainThread): Parsing macros/sql/star.sql
+2021-12-03 21:41:16.771945 (MainThread): Parsing macros/sql/surrogate_key.sql
+2021-12-03 21:41:16.779217 (MainThread): Parsing macros/sql/union.sql
+2021-12-03 21:41:16.794971 (MainThread): Parsing macros/sql/unpivot.sql
+2021-12-03 21:41:16.809991 (MainThread): Parsing macros/web/get_url_host.sql
+2021-12-03 21:41:16.813485 (MainThread): Parsing macros/web/get_url_parameter.sql
+2021-12-03 21:41:16.816511 (MainThread): Parsing macros/web/get_url_path.sql
+2021-12-03 21:41:17.434268 (MainThread): Acquiring new athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:41:17.529852 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2021-12-03 21:41:17.539409 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7956909c-260c-468b-abca-f706737bb8c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe60f31aed0>]}
+2021-12-03 21:41:17.549932 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-03 21:41:17.550658 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7956909c-260c-468b-abca-f706737bb8c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe60f30b650>]}
+2021-12-03 21:41:17.551313 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 347 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+2021-12-03 21:41:17.553672 (MainThread): 
+2021-12-03 21:41:17.554428 (MainThread): Acquiring new athena connection "master".
+2021-12-03 21:41:17.555804 (ThreadPoolExecutor-0_0): Acquiring new athena connection "list_awsdatacatalog".
+2021-12-03 21:41:17.578308 (ThreadPoolExecutor-0_0): Using athena connection "list_awsdatacatalog".
+2021-12-03 21:41:17.578698 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+  
+2021-12-03 21:41:17.579108 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-03 21:41:17.688349 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+2021-12-03 21:41:19.095522 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 1.52 seconds
+2021-12-03 21:41:19.097990 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: Close
+2021-12-03 21:41:19.099126 (ThreadPoolExecutor-0_0): Acquiring new athena connection "create_awsdatacatalog_dbt".
+2021-12-03 21:41:19.099574 (ThreadPoolExecutor-0_0): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 34138), raddr=('54.185.228.35', 443)>
+2021-12-03 21:41:19.100423 (ThreadPoolExecutor-0_0): Acquiring new athena connection "create_awsdatacatalog_dbt".
+2021-12-03 21:41:19.101107 (ThreadPoolExecutor-0_0): Creating schema "dbt"
+2021-12-03 21:41:19.110410 (ThreadPoolExecutor-0_0): Using athena connection "create_awsdatacatalog_dbt".
+2021-12-03 21:41:19.110802 (ThreadPoolExecutor-0_0): On create_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "create_awsdatacatalog_dbt"} */
+create schema if not exists dbt
+  
+2021-12-03 21:41:19.111502 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state closed
+2021-12-03 21:41:19.175543 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "create_awsdatacatalog_dbt"} */
+create schema if not exists dbt
+2021-12-03 21:41:20.532284 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 1.42 seconds
+2021-12-03 21:41:20.534031 (ThreadPoolExecutor-0_0): On create_awsdatacatalog_dbt: Close
+2021-12-03 21:41:20.535784 (ThreadPoolExecutor-3_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-12-03 21:41:20.536393 (ThreadPoolExecutor-3_0): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 38838), raddr=('44.235.65.250', 443)>
+2021-12-03 21:41:20.549942 (ThreadPoolExecutor-3_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-12-03 21:41:20.550379 (ThreadPoolExecutor-3_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-12-03 21:41:20.550922 (ThreadPoolExecutor-3_0): Opening a new connection, currently in state closed
+2021-12-03 21:41:20.605285 (ThreadPoolExecutor-3_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-12-03 21:41:43.486869 (ThreadPoolExecutor-3_0): SQL status: OK -1 in 22.94 seconds
+2021-12-03 21:41:43.488702 (ThreadPoolExecutor-3_0): On list_awsdatacatalog_dbt: Close
+2021-12-03 21:41:43.490645 (MainThread): 21:41:43 | Concurrency: 1 threads (target='default')
+2021-12-03 21:41:43.491077 (MainThread): 21:41:43 | 
+2021-12-03 21:41:43.496823 (Thread-1): Began running node model.my_new_project.stg_mswo
+2021-12-03 21:41:43.498716 (Thread-1): 21:41:43 | 1 of 1 START view model dbt.stg_mswo................................. [RUN]
+2021-12-03 21:41:43.501715 (Thread-1): Acquiring new athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:41:43.506283 (Thread-1): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 34154), raddr=('54.185.228.35', 443)>
+2021-12-03 21:41:43.510410 (Thread-1): Compiling model.my_new_project.stg_mswo
+2021-12-03 21:41:43.522000 (Thread-1): Writing injected SQL for node "model.my_new_project.stg_mswo"
+2021-12-03 21:41:43.526671 (Thread-1): finished collecting timing info
+2021-12-03 21:41:43.589027 (Thread-1): Writing runtime SQL for node "model.my_new_project.stg_mswo"
+2021-12-03 21:41:43.589863 (Thread-1): Using athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:41:43.590124 (Thread-1): On model.my_new_project.stg_mswo: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+
+2021-12-03 21:41:43.590373 (Thread-1): Opening a new connection, currently in state closed
+2021-12-03 21:41:43.665197 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:41:43.752114 (Thread-1): Failed to execute query.
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 311, in _execute
+    **request
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 360, in iter
+    return fut.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 388, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 708, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:41:48.760401 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:41:48.779070 (Thread-1): Failed to execute query.
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 311, in _execute
+    **request
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 360, in iter
+    return fut.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 388, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 708, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:41:58.789922 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:41:58.823436 (Thread-1): Failed to execute query.
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 311, in _execute
+    **request
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 360, in iter
+    return fut.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 388, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 708, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:42:18.844319 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:42:18.871423 (Thread-1): Failed to execute query.
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 311, in _execute
+    **request
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 360, in iter
+    return fut.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 388, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 708, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:42:58.912308 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:42:58.963794 (Thread-1): Failed to execute query.
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 311, in _execute
+    **request
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 360, in iter
+    return fut.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 388, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 708, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:42:58.964655 (Thread-1): Error running SQL: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+
+2021-12-03 21:42:58.965085 (Thread-1): finished collecting timing info
+2021-12-03 21:42:58.965587 (Thread-1): On model.my_new_project.stg_mswo: Close
+2021-12-03 21:42:58.966869 (Thread-1): Runtime Error in model stg_mswo (models/staging/provider_data/stg_mswo.sql)
+  An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+  create or replace view
+      dbt.stg_mswo
+    as
+      with source as (
+      select * from spike_provider_data.optum
+      limit 10;
+  ),
+  renamed as (
+  select
+         "prac id" as prac_id,
+         "last name" as last_name,
+         "first name" as first_name,
+         gender,
+         designator,
+         licn_output_change,
+         "group name" as group_name,
+         addr1,
+         addr2,
+         city,
+         county,
+         state,
+         "zip code" as zip_code,
+         "phone number" as phone_number,
+         "language(s)" as languages,
+         "accepting new patient?" as accepting_new_patients,
+         ethnicity,
+         program,
+         specialty
+  )
+  select * from renamed
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 311, in _execute
+    **request
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 360, in iter
+    return fut.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 388, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/botocore/client.py", line 708, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 121, in exception_handler
+    yield
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 112, in execute
+    return retry(inner)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 372, in iter
+    raise retry_exc.reraise()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 189, in reraise
+    raise self.last_attempt.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 84, in inner
+    cache_expiration_time=cache_expiration_time,
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/pyathena/common.py", line 315, in _execute
+    raise DatabaseError(*e.args) from e
+pyathena.error.DatabaseError: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10;
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 21, in macro
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 229, in execute
+    fetch=fetch
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/home/ec2-user/anaconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 124, in exception_handler
+    raise RuntimeException(str(e)) from e
+dbt.exceptions.RuntimeException: Runtime Error in model stg_mswo (models/staging/provider_data/stg_mswo.sql)
+  An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+  create or replace view
+      dbt.stg_mswo
+    as
+      with source as (
+      select * from spike_provider_data.optum
+      limit 10;
+  ),
+  renamed as (
+  select
+         "prac id" as prac_id,
+         "last name" as last_name,
+         "first name" as first_name,
+         gender,
+         designator,
+         licn_output_change,
+         "group name" as group_name,
+         addr1,
+         addr2,
+         city,
+         county,
+         state,
+         "zip code" as zip_code,
+         "phone number" as phone_number,
+         "language(s)" as languages,
+         "accepting new patient?" as accepting_new_patients,
+         ethnicity,
+         program,
+         specialty
+  )
+  select * from renamed
+2021-12-03 21:42:58.971302 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7956909c-260c-468b-abca-f706737bb8c0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe6110cd350>]}
+2021-12-03 21:42:58.973062 (Thread-1): 21:42:58 | 1 of 1 ERROR creating view model dbt.stg_mswo........................ [ERROR in 75.47s]
+2021-12-03 21:42:58.973627 (Thread-1): Finished running node model.my_new_project.stg_mswo
+2021-12-03 21:42:59.003885 (MainThread): Acquiring new athena connection "master".
+2021-12-03 21:42:59.005030 (MainThread): 21:42:58 | 
+2021-12-03 21:42:59.005475 (MainThread): 21:42:58 | Finished running 1 view model in 101.45s.
+2021-12-03 21:42:59.006106 (MainThread): Connection 'master' was properly closed.
+2021-12-03 21:42:59.006801 (MainThread): Connection 'model.my_new_project.stg_mswo' was properly closed.
+2021-12-03 21:42:59.021485 (MainThread): 
+2021-12-03 21:42:59.022733 (MainThread): Completed with 1 error and 0 warnings:
+2021-12-03 21:42:59.023242 (MainThread): 
+2021-12-03 21:42:59.023698 (MainThread): Runtime Error in model stg_mswo (models/staging/provider_data/stg_mswo.sql)
+2021-12-03 21:42:59.024099 (MainThread):   An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: Only one sql statement is allowed. Got: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+2021-12-03 21:42:59.024655 (MainThread):   create or replace view
+2021-12-03 21:42:59.024912 (MainThread):       dbt.stg_mswo
+2021-12-03 21:42:59.025151 (MainThread):     as
+2021-12-03 21:42:59.025465 (MainThread):       with source as (
+2021-12-03 21:42:59.025955 (MainThread):       select * from spike_provider_data.optum
+2021-12-03 21:42:59.026369 (MainThread):       limit 10;
+2021-12-03 21:42:59.027742 (MainThread):   ),
+2021-12-03 21:42:59.028334 (MainThread):   renamed as (
+2021-12-03 21:42:59.030159 (MainThread):   select
+2021-12-03 21:42:59.031497 (MainThread):          "prac id" as prac_id,
+2021-12-03 21:42:59.031941 (MainThread):          "last name" as last_name,
+2021-12-03 21:42:59.033826 (MainThread):          "first name" as first_name,
+2021-12-03 21:42:59.034220 (MainThread):          gender,
+2021-12-03 21:42:59.034854 (MainThread):          designator,
+2021-12-03 21:42:59.035311 (MainThread):          licn_output_change,
+2021-12-03 21:42:59.036226 (MainThread):          "group name" as group_name,
+2021-12-03 21:42:59.036784 (MainThread):          addr1,
+2021-12-03 21:42:59.037112 (MainThread):          addr2,
+2021-12-03 21:42:59.037886 (MainThread):          city,
+2021-12-03 21:42:59.038312 (MainThread):          county,
+2021-12-03 21:42:59.038728 (MainThread):          state,
+2021-12-03 21:42:59.039138 (MainThread):          "zip code" as zip_code,
+2021-12-03 21:42:59.039671 (MainThread):          "phone number" as phone_number,
+2021-12-03 21:42:59.040086 (MainThread):          "language(s)" as languages,
+2021-12-03 21:42:59.040501 (MainThread):          "accepting new patient?" as accepting_new_patients,
+2021-12-03 21:42:59.040912 (MainThread):          ethnicity,
+2021-12-03 21:42:59.041306 (MainThread):          program,
+2021-12-03 21:42:59.041805 (MainThread):          specialty
+2021-12-03 21:42:59.042215 (MainThread):   )
+2021-12-03 21:42:59.042617 (MainThread):   select * from renamed
+2021-12-03 21:42:59.043232 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-12-03 21:42:59.043791 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe60d1e6050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5ffe273d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe60d581650>]}
+2021-12-03 21:42:59.044394 (MainThread): Flushing usage events
+2021-12-03 21:43:35.190677 (MainThread): Running with dbt=0.21.0
+2021-12-03 21:43:35.195294 (MainThread): target not specified in profile 'athena', using 'default'
+2021-12-03 21:43:35.432862 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=False, warn_error=False, which='run', write_json=True)
+2021-12-03 21:43:35.434220 (MainThread): Tracking: tracking
+2021-12-03 21:43:35.463469 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee769bb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee769b850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee769b6d0>]}
+2021-12-03 21:43:35.490257 (MainThread): Partial parsing not enabled
+2021-12-03 21:43:35.515343 (MainThread): Parsing macros/adapters.sql
+2021-12-03 21:43:35.541208 (MainThread): Parsing macros/catalog.sql
+2021-12-03 21:43:35.546380 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-03 21:43:35.584568 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-03 21:43:35.592612 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-03 21:43:35.594465 (MainThread): Parsing macros/materializations/table.sql
+2021-12-03 21:43:35.600586 (MainThread): Parsing macros/materializations/view.sql
+2021-12-03 21:43:35.610170 (MainThread): Parsing macros/core.sql
+2021-12-03 21:43:35.616921 (MainThread): Parsing macros/adapters/common.sql
+2021-12-03 21:43:35.709796 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-03 21:43:35.725642 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-03 21:43:35.728596 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-03 21:43:35.731891 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-03 21:43:35.736771 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-03 21:43:35.739970 (MainThread): Parsing macros/etc/query.sql
+2021-12-03 21:43:35.741944 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-03 21:43:35.745235 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-03 21:43:35.763250 (MainThread): Parsing macros/materializations/test.sql
+2021-12-03 21:43:35.775889 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-03 21:43:35.800923 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-03 21:43:35.804345 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-03 21:43:35.823886 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-03 21:43:35.858766 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-03 21:43:35.899668 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-03 21:43:35.951195 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-03 21:43:35.954461 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-03 21:43:35.986379 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-03 21:43:35.999537 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-03 21:43:36.007559 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-03 21:43:36.019904 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-03 21:43:36.024267 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-03 21:43:36.026748 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-03 21:43:36.030139 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-03 21:43:36.032551 (MainThread): Parsing macros/cross_db_utils/_is_ephemeral.sql
+2021-12-03 21:43:36.036213 (MainThread): Parsing macros/cross_db_utils/_is_relation.sql
+2021-12-03 21:43:36.038577 (MainThread): Parsing macros/cross_db_utils/cast_bool_to_text.sql
+2021-12-03 21:43:36.041156 (MainThread): Parsing macros/cross_db_utils/concat.sql
+2021-12-03 21:43:36.043256 (MainThread): Parsing macros/cross_db_utils/current_timestamp.sql
+2021-12-03 21:43:36.049825 (MainThread): Parsing macros/cross_db_utils/datatypes.sql
+2021-12-03 21:43:36.060757 (MainThread): Parsing macros/cross_db_utils/date_trunc.sql
+2021-12-03 21:43:36.063686 (MainThread): Parsing macros/cross_db_utils/dateadd.sql
+2021-12-03 21:43:36.069258 (MainThread): Parsing macros/cross_db_utils/datediff.sql
+2021-12-03 21:43:36.087936 (MainThread): Parsing macros/cross_db_utils/except.sql
+2021-12-03 21:43:36.090308 (MainThread): Parsing macros/cross_db_utils/hash.sql
+2021-12-03 21:43:36.092990 (MainThread): Parsing macros/cross_db_utils/identifier.sql
+2021-12-03 21:43:36.096416 (MainThread): Parsing macros/cross_db_utils/intersect.sql
+2021-12-03 21:43:36.098639 (MainThread): Parsing macros/cross_db_utils/last_day.sql
+2021-12-03 21:43:36.105650 (MainThread): Parsing macros/cross_db_utils/length.sql
+2021-12-03 21:43:36.108164 (MainThread): Parsing macros/cross_db_utils/literal.sql
+2021-12-03 21:43:36.110153 (MainThread): Parsing macros/cross_db_utils/position.sql
+2021-12-03 21:43:36.113607 (MainThread): Parsing macros/cross_db_utils/replace.sql
+2021-12-03 21:43:36.116167 (MainThread): Parsing macros/cross_db_utils/right.sql
+2021-12-03 21:43:36.120601 (MainThread): Parsing macros/cross_db_utils/safe_cast.sql
+2021-12-03 21:43:36.124197 (MainThread): Parsing macros/cross_db_utils/split_part.sql
+2021-12-03 21:43:36.127674 (MainThread): Parsing macros/cross_db_utils/width_bucket.sql
+2021-12-03 21:43:36.137117 (MainThread): Parsing macros/jinja_helpers/log_info.sql
+2021-12-03 21:43:36.139460 (MainThread): Parsing macros/jinja_helpers/pretty_log_format.sql
+2021-12-03 21:43:36.141907 (MainThread): Parsing macros/jinja_helpers/pretty_time.sql
+2021-12-03 21:43:36.144523 (MainThread): Parsing macros/jinja_helpers/slugify.sql
+2021-12-03 21:43:36.147074 (MainThread): Parsing macros/materializations/insert_by_period_materialization.sql
+2021-12-03 21:43:36.192009 (MainThread): Parsing macros/schema_tests/accepted_range.sql
+2021-12-03 21:43:36.197117 (MainThread): Parsing macros/schema_tests/at_least_one.sql
+2021-12-03 21:43:36.199982 (MainThread): Parsing macros/schema_tests/cardinality_equality.sql
+2021-12-03 21:43:36.203963 (MainThread): Parsing macros/schema_tests/equal_rowcount.sql
+2021-12-03 21:43:36.207772 (MainThread): Parsing macros/schema_tests/equality.sql
+2021-12-03 21:43:36.215135 (MainThread): Parsing macros/schema_tests/expression_is_true.sql
+2021-12-03 21:43:36.219066 (MainThread): Parsing macros/schema_tests/fewer_rows_than.sql
+2021-12-03 21:43:36.222628 (MainThread): Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+2021-12-03 21:43:36.238351 (MainThread): Parsing macros/schema_tests/not_accepted_values.sql
+2021-12-03 21:43:36.242820 (MainThread): Parsing macros/schema_tests/not_constant.sql
+2021-12-03 21:43:36.245659 (MainThread): Parsing macros/schema_tests/recency.sql
+2021-12-03 21:43:36.249224 (MainThread): Parsing macros/schema_tests/relationships_where.sql
+2021-12-03 21:43:36.254243 (MainThread): Parsing macros/schema_tests/sequential_values.sql
+2021-12-03 21:43:36.259705 (MainThread): Parsing macros/schema_tests/test_not_null_where.sql
+2021-12-03 21:43:36.263084 (MainThread): Parsing macros/schema_tests/test_unique_where.sql
+2021-12-03 21:43:36.266387 (MainThread): Parsing macros/schema_tests/unique_combination_of_columns.sql
+2021-12-03 21:43:36.272204 (MainThread): Parsing macros/sql/date_spine.sql
+2021-12-03 21:43:36.281028 (MainThread): Parsing macros/sql/generate_series.sql
+2021-12-03 21:43:36.289694 (MainThread): Parsing macros/sql/get_column_values.sql
+2021-12-03 21:43:36.299857 (MainThread): Parsing macros/sql/get_query_results_as_dict.sql
+2021-12-03 21:43:36.304767 (MainThread): Parsing macros/sql/get_relations_by_pattern.sql
+2021-12-03 21:43:36.311466 (MainThread): Parsing macros/sql/get_relations_by_prefix.sql
+2021-12-03 21:43:36.318399 (MainThread): Parsing macros/sql/get_tables_by_pattern_sql.sql
+2021-12-03 21:43:36.330154 (MainThread): Parsing macros/sql/get_tables_by_prefix_sql.sql
+2021-12-03 21:43:36.333821 (MainThread): Parsing macros/sql/groupby.sql
+2021-12-03 21:43:36.336711 (MainThread): Parsing macros/sql/haversine_distance.sql
+2021-12-03 21:43:36.348266 (MainThread): Parsing macros/sql/nullcheck.sql
+2021-12-03 21:43:36.351865 (MainThread): Parsing macros/sql/nullcheck_table.sql
+2021-12-03 21:43:36.355348 (MainThread): Parsing macros/sql/pivot.sql
+2021-12-03 21:43:36.363368 (MainThread): Parsing macros/sql/safe_add.sql
+2021-12-03 21:43:36.366800 (MainThread): Parsing macros/sql/star.sql
+2021-12-03 21:43:36.373184 (MainThread): Parsing macros/sql/surrogate_key.sql
+2021-12-03 21:43:36.380596 (MainThread): Parsing macros/sql/union.sql
+2021-12-03 21:43:36.396348 (MainThread): Parsing macros/sql/unpivot.sql
+2021-12-03 21:43:36.411870 (MainThread): Parsing macros/web/get_url_host.sql
+2021-12-03 21:43:36.415947 (MainThread): Parsing macros/web/get_url_parameter.sql
+2021-12-03 21:43:36.419370 (MainThread): Parsing macros/web/get_url_path.sql
+2021-12-03 21:43:37.044223 (MainThread): Acquiring new athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:43:37.142123 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2021-12-03 21:43:37.151868 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '487ba6f1-afe7-40a1-8b9d-1f0667cb6406', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee4a63e50>]}
+2021-12-03 21:43:37.162923 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-03 21:43:37.163713 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '487ba6f1-afe7-40a1-8b9d-1f0667cb6406', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee4b37c10>]}
+2021-12-03 21:43:37.164339 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 347 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+2021-12-03 21:43:37.166840 (MainThread): 
+2021-12-03 21:43:37.167655 (MainThread): Acquiring new athena connection "master".
+2021-12-03 21:43:37.169060 (ThreadPoolExecutor-0_0): Acquiring new athena connection "list_awsdatacatalog".
+2021-12-03 21:43:37.197305 (ThreadPoolExecutor-0_0): Using athena connection "list_awsdatacatalog".
+2021-12-03 21:43:37.199515 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+  
+2021-12-03 21:43:37.200745 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-03 21:43:37.405544 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+2021-12-03 21:43:38.789068 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 1.59 seconds
+2021-12-03 21:43:38.792958 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: Close
+2021-12-03 21:43:38.799390 (ThreadPoolExecutor-2_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-12-03 21:43:38.816310 (ThreadPoolExecutor-2_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-12-03 21:43:38.816826 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-12-03 21:43:38.817219 (ThreadPoolExecutor-2_0): Opening a new connection, currently in state init
+2021-12-03 21:43:38.884216 (ThreadPoolExecutor-2_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-12-03 21:44:00.591253 (ThreadPoolExecutor-2_0): SQL status: OK -1 in 21.77 seconds
+2021-12-03 21:44:00.593483 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: Close
+2021-12-03 21:44:00.596398 (MainThread): 21:44:00 | Concurrency: 1 threads (target='default')
+2021-12-03 21:44:00.596818 (MainThread): 21:44:00 | 
+2021-12-03 21:44:00.605162 (Thread-1): Began running node model.my_new_project.stg_mswo
+2021-12-03 21:44:00.605949 (Thread-1): 21:44:00 | 1 of 1 START view model dbt.stg_mswo................................. [RUN]
+2021-12-03 21:44:00.607243 (Thread-1): Acquiring new athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:44:00.608144 (Thread-1): unclosed <ssl.SSLSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 45318), raddr=('44.240.249.254', 443)>
+2021-12-03 21:44:00.608872 (Thread-1): Compiling model.my_new_project.stg_mswo
+2021-12-03 21:44:00.620296 (Thread-1): Writing injected SQL for node "model.my_new_project.stg_mswo"
+2021-12-03 21:44:00.621057 (Thread-1): finished collecting timing info
+2021-12-03 21:44:00.677667 (Thread-1): Writing runtime SQL for node "model.my_new_project.stg_mswo"
+2021-12-03 21:44:00.678347 (Thread-1): Using athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:44:00.678613 (Thread-1): On model.my_new_project.stg_mswo: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+
+2021-12-03 21:44:00.678921 (Thread-1): Opening a new connection, currently in state closed
+2021-12-03 21:44:00.746242 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:44:06.913944 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:44:18.035769 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:44:39.171755 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:45:20.327264 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+2021-12-03 21:45:21.472430 (Thread-1): Error running SQL: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as (
+    select * from spike_provider_data.optum
+    limit 10
+),
+renamed as (
+select
+       "prac id" as prac_id,
+       "last name" as last_name,
+       "first name" as first_name,
+       gender,
+       designator,
+       licn_output_change,
+       "group name" as group_name,
+       addr1,
+       addr2,
+       city,
+       county,
+       state,
+       "zip code" as zip_code,
+       "phone number" as phone_number,
+       "language(s)" as languages,
+       "accepting new patient?" as accepting_new_patients,
+       ethnicity,
+       program,
+       specialty
+)
+select * from renamed
+
+2021-12-03 21:45:21.472918 (Thread-1): finished collecting timing info
+2021-12-03 21:45:21.473304 (Thread-1): On model.my_new_project.stg_mswo: Close
+2021-12-03 21:45:21.474579 (Thread-1): Runtime Error in model stg_mswo (models/staging/provider_data/stg_mswo.sql)
+  com.facebook.presto.v217.sql.analyzer.SemanticException: line 11:8: Column 'prac id' cannot be resolved
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 121, in exception_handler
+    yield
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 112, in execute
+    return retry(inner)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 423, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 372, in iter
+    raise retry_exc.reraise()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 189, in reraise
+    raise self.last_attempt.result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/home/ec2-user/anaconda3/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/tenacity/__init__.py", line 426, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 99, in inner
+    raise OperationalError(query_execution.state_change_reason)
+pyathena.error.OperationalError: com.facebook.presto.v217.sql.analyzer.SemanticException: line 11:8: Column 'prac id' cannot be resolved
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 21, in macro
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 66, in macro
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 229, in execute
+    fetch=fetch
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/home/ec2-user/anaconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/ec2-user/.cache/pypoetry/virtualenvs/redshift-etl-automation-with-dbt-CQtTrOK5-py3.7/lib/python3.7/site-packages/dbt/adapters/athena/connections.py", line 124, in exception_handler
+    raise RuntimeException(str(e)) from e
+dbt.exceptions.RuntimeException: Runtime Error in model stg_mswo (models/staging/provider_data/stg_mswo.sql)
+  com.facebook.presto.v217.sql.analyzer.SemanticException: line 11:8: Column 'prac id' cannot be resolved
+2021-12-03 21:45:21.481324 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '487ba6f1-afe7-40a1-8b9d-1f0667cb6406', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2eddc3f110>]}
+2021-12-03 21:45:21.483616 (Thread-1): 21:45:21 | 1 of 1 ERROR creating view model dbt.stg_mswo........................ [ERROR in 80.87s]
+2021-12-03 21:45:21.486047 (Thread-1): Finished running node model.my_new_project.stg_mswo
+2021-12-03 21:45:21.513026 (MainThread): Acquiring new athena connection "master".
+2021-12-03 21:45:21.514485 (MainThread): 21:45:21 | 
+2021-12-03 21:45:21.514921 (MainThread): 21:45:21 | Finished running 1 view model in 104.35s.
+2021-12-03 21:45:21.515684 (MainThread): Connection 'master' was properly closed.
+2021-12-03 21:45:21.516630 (MainThread): Connection 'list_awsdatacatalog' was properly closed.
+2021-12-03 21:45:21.517005 (MainThread): Connection 'model.my_new_project.stg_mswo' was properly closed.
+2021-12-03 21:45:21.517433 (MainThread): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 42046), raddr=('52.89.162.86', 443)>
+2021-12-03 21:45:21.547128 (MainThread): 
+2021-12-03 21:45:21.547525 (MainThread): Completed with 1 error and 0 warnings:
+2021-12-03 21:45:21.553448 (MainThread): 
+2021-12-03 21:45:21.565262 (MainThread): Runtime Error in model stg_mswo (models/staging/provider_data/stg_mswo.sql)
+2021-12-03 21:45:21.569287 (MainThread):   com.facebook.presto.v217.sql.analyzer.SemanticException: line 11:8: Column 'prac id' cannot be resolved
+2021-12-03 21:45:21.578991 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-12-03 21:45:21.587893 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee4b37650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ede4d2c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ee4aa75d0>]}
+2021-12-03 21:45:21.588604 (MainThread): Flushing usage events
+2021-12-03 21:50:27.598776 (MainThread): Running with dbt=0.21.0
+2021-12-03 21:50:27.603662 (MainThread): target not specified in profile 'athena', using 'default'
+2021-12-03 21:50:27.831896 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/ec2-user/repos/redshift-etl-automation-with-dbt/src/dbt-project', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=False, warn_error=False, which='run', write_json=True)
+2021-12-03 21:50:27.833016 (MainThread): Tracking: tracking
+2021-12-03 21:50:27.863091 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde79e9e3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde79e9e5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde79e48450>]}
+2021-12-03 21:50:27.890870 (MainThread): Partial parsing not enabled
+2021-12-03 21:50:27.915282 (MainThread): Parsing macros/adapters.sql
+2021-12-03 21:50:27.940541 (MainThread): Parsing macros/catalog.sql
+2021-12-03 21:50:27.945492 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-03 21:50:27.983370 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-03 21:50:27.991278 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-03 21:50:27.992995 (MainThread): Parsing macros/materializations/table.sql
+2021-12-03 21:50:27.998651 (MainThread): Parsing macros/materializations/view.sql
+2021-12-03 21:50:28.008356 (MainThread): Parsing macros/core.sql
+2021-12-03 21:50:28.016419 (MainThread): Parsing macros/adapters/common.sql
+2021-12-03 21:50:28.109224 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-03 21:50:28.125113 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-03 21:50:28.128333 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-03 21:50:28.131509 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-03 21:50:28.136295 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-03 21:50:28.139451 (MainThread): Parsing macros/etc/query.sql
+2021-12-03 21:50:28.141611 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-03 21:50:28.145003 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-03 21:50:28.162354 (MainThread): Parsing macros/materializations/test.sql
+2021-12-03 21:50:28.175574 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-03 21:50:28.200143 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-03 21:50:28.203852 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-03 21:50:28.223473 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-03 21:50:28.258248 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-03 21:50:28.299370 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-03 21:50:28.350305 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-03 21:50:28.353836 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-03 21:50:28.386125 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-03 21:50:28.398849 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-03 21:50:28.406101 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-03 21:50:28.419130 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-03 21:50:28.423507 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-03 21:50:28.425934 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-03 21:50:28.428977 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-03 21:50:28.431663 (MainThread): Parsing macros/cross_db_utils/_is_ephemeral.sql
+2021-12-03 21:50:28.435438 (MainThread): Parsing macros/cross_db_utils/_is_relation.sql
+2021-12-03 21:50:28.437925 (MainThread): Parsing macros/cross_db_utils/cast_bool_to_text.sql
+2021-12-03 21:50:28.440510 (MainThread): Parsing macros/cross_db_utils/concat.sql
+2021-12-03 21:50:28.442423 (MainThread): Parsing macros/cross_db_utils/current_timestamp.sql
+2021-12-03 21:50:28.448626 (MainThread): Parsing macros/cross_db_utils/datatypes.sql
+2021-12-03 21:50:28.459093 (MainThread): Parsing macros/cross_db_utils/date_trunc.sql
+2021-12-03 21:50:28.462218 (MainThread): Parsing macros/cross_db_utils/dateadd.sql
+2021-12-03 21:50:28.468170 (MainThread): Parsing macros/cross_db_utils/datediff.sql
+2021-12-03 21:50:28.486033 (MainThread): Parsing macros/cross_db_utils/except.sql
+2021-12-03 21:50:28.488122 (MainThread): Parsing macros/cross_db_utils/hash.sql
+2021-12-03 21:50:28.490825 (MainThread): Parsing macros/cross_db_utils/identifier.sql
+2021-12-03 21:50:28.494127 (MainThread): Parsing macros/cross_db_utils/intersect.sql
+2021-12-03 21:50:28.496074 (MainThread): Parsing macros/cross_db_utils/last_day.sql
+2021-12-03 21:50:28.502684 (MainThread): Parsing macros/cross_db_utils/length.sql
+2021-12-03 21:50:28.505053 (MainThread): Parsing macros/cross_db_utils/literal.sql
+2021-12-03 21:50:28.506984 (MainThread): Parsing macros/cross_db_utils/position.sql
+2021-12-03 21:50:28.510198 (MainThread): Parsing macros/cross_db_utils/replace.sql
+2021-12-03 21:50:28.512659 (MainThread): Parsing macros/cross_db_utils/right.sql
+2021-12-03 21:50:28.517259 (MainThread): Parsing macros/cross_db_utils/safe_cast.sql
+2021-12-03 21:50:28.521013 (MainThread): Parsing macros/cross_db_utils/split_part.sql
+2021-12-03 21:50:28.524547 (MainThread): Parsing macros/cross_db_utils/width_bucket.sql
+2021-12-03 21:50:28.533782 (MainThread): Parsing macros/jinja_helpers/log_info.sql
+2021-12-03 21:50:28.535878 (MainThread): Parsing macros/jinja_helpers/pretty_log_format.sql
+2021-12-03 21:50:28.538146 (MainThread): Parsing macros/jinja_helpers/pretty_time.sql
+2021-12-03 21:50:28.540561 (MainThread): Parsing macros/jinja_helpers/slugify.sql
+2021-12-03 21:50:28.542919 (MainThread): Parsing macros/materializations/insert_by_period_materialization.sql
+2021-12-03 21:50:28.586954 (MainThread): Parsing macros/schema_tests/accepted_range.sql
+2021-12-03 21:50:28.592125 (MainThread): Parsing macros/schema_tests/at_least_one.sql
+2021-12-03 21:50:28.594857 (MainThread): Parsing macros/schema_tests/cardinality_equality.sql
+2021-12-03 21:50:28.598902 (MainThread): Parsing macros/schema_tests/equal_rowcount.sql
+2021-12-03 21:50:28.602312 (MainThread): Parsing macros/schema_tests/equality.sql
+2021-12-03 21:50:28.609077 (MainThread): Parsing macros/schema_tests/expression_is_true.sql
+2021-12-03 21:50:28.612928 (MainThread): Parsing macros/schema_tests/fewer_rows_than.sql
+2021-12-03 21:50:28.616149 (MainThread): Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+2021-12-03 21:50:28.631874 (MainThread): Parsing macros/schema_tests/not_accepted_values.sql
+2021-12-03 21:50:28.636955 (MainThread): Parsing macros/schema_tests/not_constant.sql
+2021-12-03 21:50:28.640218 (MainThread): Parsing macros/schema_tests/recency.sql
+2021-12-03 21:50:28.644049 (MainThread): Parsing macros/schema_tests/relationships_where.sql
+2021-12-03 21:50:28.648481 (MainThread): Parsing macros/schema_tests/sequential_values.sql
+2021-12-03 21:50:28.653288 (MainThread): Parsing macros/schema_tests/test_not_null_where.sql
+2021-12-03 21:50:28.656103 (MainThread): Parsing macros/schema_tests/test_unique_where.sql
+2021-12-03 21:50:28.658730 (MainThread): Parsing macros/schema_tests/unique_combination_of_columns.sql
+2021-12-03 21:50:28.663693 (MainThread): Parsing macros/sql/date_spine.sql
+2021-12-03 21:50:28.671873 (MainThread): Parsing macros/sql/generate_series.sql
+2021-12-03 21:50:28.679980 (MainThread): Parsing macros/sql/get_column_values.sql
+2021-12-03 21:50:28.689335 (MainThread): Parsing macros/sql/get_query_results_as_dict.sql
+2021-12-03 21:50:28.694103 (MainThread): Parsing macros/sql/get_relations_by_pattern.sql
+2021-12-03 21:50:28.700753 (MainThread): Parsing macros/sql/get_relations_by_prefix.sql
+2021-12-03 21:50:28.707336 (MainThread): Parsing macros/sql/get_tables_by_pattern_sql.sql
+2021-12-03 21:50:28.718884 (MainThread): Parsing macros/sql/get_tables_by_prefix_sql.sql
+2021-12-03 21:50:28.722295 (MainThread): Parsing macros/sql/groupby.sql
+2021-12-03 21:50:28.724792 (MainThread): Parsing macros/sql/haversine_distance.sql
+2021-12-03 21:50:28.735958 (MainThread): Parsing macros/sql/nullcheck.sql
+2021-12-03 21:50:28.739202 (MainThread): Parsing macros/sql/nullcheck_table.sql
+2021-12-03 21:50:28.742447 (MainThread): Parsing macros/sql/pivot.sql
+2021-12-03 21:50:28.750597 (MainThread): Parsing macros/sql/safe_add.sql
+2021-12-03 21:50:28.753972 (MainThread): Parsing macros/sql/star.sql
+2021-12-03 21:50:28.761197 (MainThread): Parsing macros/sql/surrogate_key.sql
+2021-12-03 21:50:28.768277 (MainThread): Parsing macros/sql/union.sql
+2021-12-03 21:50:28.784144 (MainThread): Parsing macros/sql/unpivot.sql
+2021-12-03 21:50:28.799590 (MainThread): Parsing macros/web/get_url_host.sql
+2021-12-03 21:50:28.803211 (MainThread): Parsing macros/web/get_url_parameter.sql
+2021-12-03 21:50:28.806320 (MainThread): Parsing macros/web/get_url_path.sql
+2021-12-03 21:50:29.440240 (MainThread): Acquiring new athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:50:29.549265 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fc479c1f-784d-4d5a-9245-c31cc07172fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde772be0d0>]}
+2021-12-03 21:50:29.559654 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-03 21:50:29.560208 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fc479c1f-784d-4d5a-9245-c31cc07172fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde7730aa10>]}
+2021-12-03 21:50:29.560679 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 347 macros, 0 operations, 0 seed files, 2 sources, 0 exposures
+2021-12-03 21:50:29.562831 (MainThread): 
+2021-12-03 21:50:29.563566 (MainThread): Acquiring new athena connection "master".
+2021-12-03 21:50:29.564761 (ThreadPoolExecutor-0_0): Acquiring new athena connection "list_awsdatacatalog".
+2021-12-03 21:50:29.586118 (ThreadPoolExecutor-0_0): Using athena connection "list_awsdatacatalog".
+2021-12-03 21:50:29.586489 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+  
+2021-12-03 21:50:29.586745 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-03 21:50:29.687252 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+2021-12-03 21:50:31.027846 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 1.44 seconds
+2021-12-03 21:50:31.030463 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: Close
+2021-12-03 21:50:31.032188 (ThreadPoolExecutor-2_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-12-03 21:50:31.043986 (ThreadPoolExecutor-2_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-12-03 21:50:31.044391 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-12-03 21:50:31.044829 (ThreadPoolExecutor-2_0): Opening a new connection, currently in state init
+2021-12-03 21:50:31.104439 (ThreadPoolExecutor-2_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-12-03 21:50:52.897928 (ThreadPoolExecutor-2_0): SQL status: OK -1 in 21.85 seconds
+2021-12-03 21:50:52.899688 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: Close
+2021-12-03 21:50:52.906245 (MainThread): 21:50:52 | Concurrency: 1 threads (target='default')
+2021-12-03 21:50:52.907168 (MainThread): 21:50:52 | 
+2021-12-03 21:50:52.916539 (Thread-1): Began running node model.my_new_project.stg_mswo
+2021-12-03 21:50:52.917421 (Thread-1): 21:50:52 | 1 of 1 START view model dbt.stg_mswo................................. [RUN]
+2021-12-03 21:50:52.918349 (Thread-1): Acquiring new athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:50:52.919017 (Thread-1): unclosed <ssl.SSLSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 42132), raddr=('52.89.162.86', 443)>
+2021-12-03 21:50:52.919464 (Thread-1): Compiling model.my_new_project.stg_mswo
+2021-12-03 21:50:52.926318 (Thread-1): Writing injected SQL for node "model.my_new_project.stg_mswo"
+2021-12-03 21:50:52.927337 (Thread-1): finished collecting timing info
+2021-12-03 21:50:52.972864 (Thread-1): Writing runtime SQL for node "model.my_new_project.stg_mswo"
+2021-12-03 21:50:52.974105 (Thread-1): Using athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:50:52.974427 (Thread-1): On model.my_new_project.stg_mswo: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as
+    ( select *
+     from spike_provider_data.optum
+     limit 10), 
+renamed as
+    (select "prac id" as prac_id,
+            "last name" as last_name,
+            "first name" as first_name,
+            gender,
+            designator,
+            licn_output_change,
+            "group name" as group_name,
+            addr1,
+            addr2,
+            city,
+            county,
+            state,
+            "zip code" as zip_code,
+            "phone number" as phone_number,
+            "language(s)" as languages,
+            "accepting new patient?" as accepting_new_patients,
+            ethnicity,
+            program,
+            specialty
+     from source)
+select *
+from renamed
+
+2021-12-03 21:50:52.974852 (Thread-1): Opening a new connection, currently in state closed
+2021-12-03 21:50:53.057113 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+create or replace view
+    dbt.stg_mswo
+  as
+    with source as
+    ( select *
+     from spike_provider_data.optum
+     limit 10), 
+renamed as
+    (select "prac id" as prac_id,
+            "last name" as last_name,
+            "first name" as first_name,
+            gender,
+            designator,
+            licn_output_change,
+            "group name" as group_name,
+            addr1,
+            addr2,
+            city,
+            county,
+            state,
+            "zip code" as zip_code,
+            "phone number" as phone_number,
+            "language(s)" as languages,
+            "accepting new patient?" as accepting_new_patients,
+            ethnicity,
+            program,
+            specialty
+     from source)
+select *
+from renamed
+2021-12-03 21:50:54.365946 (Thread-1): SQL status: OK -1 in 1.39 seconds
+2021-12-03 21:50:54.381693 (Thread-1): Using athena connection "model.my_new_project.stg_mswo".
+2021-12-03 21:50:54.382215 (Thread-1): On model.my_new_project.stg_mswo: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+alter table dbt.stg_mswo set tblproperties ('classification' = 'view')
+2021-12-03 21:50:54.382949 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "default", "node_id": "model.my_new_project.stg_mswo"} */
+alter table dbt.stg_mswo set tblproperties ('classification' = 'view')
+2021-12-03 21:50:55.703280 (Thread-1): SQL status: OK -1 in 1.32 seconds
+2021-12-03 21:50:55.722399 (Thread-1): finished collecting timing info
+2021-12-03 21:50:55.723089 (Thread-1): On model.my_new_project.stg_mswo: Close
+2021-12-03 21:50:55.723979 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fc479c1f-784d-4d5a-9245-c31cc07172fe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde754d5650>]}
+2021-12-03 21:50:55.724755 (Thread-1): 21:50:55 | 1 of 1 OK created view model dbt.stg_mswo............................ [OK -1 in 2.81s]
+2021-12-03 21:50:55.725170 (Thread-1): Finished running node model.my_new_project.stg_mswo
+2021-12-03 21:50:55.824081 (MainThread): Acquiring new athena connection "master".
+2021-12-03 21:50:55.824717 (MainThread): 21:50:55 | 
+2021-12-03 21:50:55.825120 (MainThread): 21:50:55 | Finished running 1 view model in 26.26s.
+2021-12-03 21:50:55.825736 (MainThread): Connection 'master' was properly closed.
+2021-12-03 21:50:55.826053 (MainThread): Connection 'list_awsdatacatalog' was properly closed.
+2021-12-03 21:50:55.826386 (MainThread): Connection 'model.my_new_project.stg_mswo' was properly closed.
+2021-12-03 21:50:55.826743 (MainThread): unclosed <ssl.SSLSocket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 47920), raddr=('35.163.148.130', 443)>
+2021-12-03 21:50:55.834753 (MainThread): unclosed <ssl.SSLSocket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.24.0.70', 56014), raddr=('52.27.18.93', 443)>
+2021-12-03 21:50:55.847348 (MainThread): 
+2021-12-03 21:50:55.847860 (MainThread): Completed successfully
+2021-12-03 21:50:55.848330 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-12-03 21:50:55.849437 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde7731b950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde772b1d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde754eec90>]}
+2021-12-03 21:50:55.851072 (MainThread): Flushing usage events

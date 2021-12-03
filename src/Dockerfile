@@ -14,7 +14,8 @@ RUN apt-get update -y && \
 
 # Install DBT
 RUN pip install -U pip
-RUN pip install dbt
+RUN pip install dbt==0.21.0
+RUN pip install git+https://github.com/Tomme/dbt-athena.git
 
 WORKDIR /dbt-project
 

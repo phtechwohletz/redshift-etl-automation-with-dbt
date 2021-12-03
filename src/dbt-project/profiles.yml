@@ -1,12 +1,9 @@
-default:
+athena:
   outputs:
     default:
-      type: redshift
-      threads: 1
-      host: <placeholder>
-      port: 5439
-      user: <placeholder>
-      pass: <placeholder>
-      dbname: dev
-      schema: <placeholder>
-      sslmode: require
+      type: athena
+      s3_staging_dir: s3://aws-athena-query-results-us-west-2-472220033535/dbt/
+      region_name: us-west-2
+      schema: dbt
+      database: awsdatacatalog
+      threads: 4
